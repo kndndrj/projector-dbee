@@ -78,10 +78,10 @@ function M.OutputBuilder:preprocess(configurations)
   end
 
   -- refresh if loaded
-  if dbee.is_core_loaded() then
+  if dbee.api.core.is_loaded() then
     dbee.api.core.source_reload("projector")
   end
-  if dbee.is_ui_loaded() then
+  if dbee.api.ui.is_loaded() then
     dbee.api.ui.drawer_refresh()
   end
 
